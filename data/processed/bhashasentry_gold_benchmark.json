@@ -1,0 +1,67 @@
+[
+  {
+    "id": "bhasha_eval_01",
+    "query": "చంద్రయాన్-3 చంద్రునిపై ఎప్పుడు దిగింది?",
+    "language": "te",
+    "domain": "space",
+    "gold_passage_id": "doc_space_01",
+    "reference_answer": "చంద్రయాన్-3 ఆగస్టు 23, 2023న చంద్రుని దక్షిణ ధ్రువంపై దిగింది.",
+    "claims": [
+      {
+        "id": "c_te_01",
+        "text": "చంద్రయాన్-3 ఆగస్టు 23, 2023న దిగింది.",
+        "verdict": "SUPPORTED"
+      },
+      {
+        "id": "c_te_02",
+        "text": "ఇది చంద్రుని ఉత్తర ధ్రువంపై దిగింది.",
+        "verdict": "REFUTED"
+      },
+      {
+        "id": "c_te_03",
+        "text": "నాసా ఈ మిషన్‌కు పూర్తి నిధులు సమకూర్చింది.",
+        "verdict": "UNGROUNDED"
+      }
+    ]
+  },
+  {
+    "id": "bhasha_eval_02",
+    "query": "चंद्रयान-3 चंद्रमा पर कब उतरा था?",
+    "language": "hi",
+    "domain": "space",
+    "gold_passage_id": "doc_space_01_hi",
+    "reference_answer": "चंद्रयान-3 23 अगस्त 2023 को चंद्रमा के दक्षिणी ध्रुव पर उतरा था।",
+    "claims": [
+      {
+        "id": "c_hi_01",
+        "text": "चंद्रयान-3 23 अगस्त 2023 को उतरा।",
+        "verdict": "SUPPORTED"
+      },
+      {
+        "id": "c_hi_02",
+        "text": "मिशन 2019 में पूरा हुआ।",
+        "verdict": "REFUTED"
+      }
+    ]
+  },
+  {
+    "id": "bhasha_eval_03",
+    "query": "Who consecrated the Brihadisvara Temple?",
+    "language": "en",
+    "domain": "history",
+    "gold_passage_id": "doc_temple_01",
+    "reference_answer": "Raja Raja Chola I consecrated the Brihadisvara Temple in 1010 CE.",
+    "claims": [
+      {
+        "id": "c_en_01",
+        "text": "Raja Raja Chola I consecrated the temple.",
+        "verdict": "SUPPORTED"
+      },
+      {
+        "id": "c_en_02",
+        "text": "The temple was built in 1950.",
+        "verdict": "REFUTED"
+      }
+    ]
+  }
+]
