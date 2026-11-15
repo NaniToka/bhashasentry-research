@@ -1,0 +1,50 @@
+[
+  {
+    "id": "doc_space_01",
+    "title": "Chandrayaan-3 Lunar Exploration",
+    "language": "en",
+    "text": "Chandrayaan-3 was the third lunar exploration mission by the Indian Space Research Organisation (ISRO). It was launched on 14 July 2023. The lander module Vikram and rover Pragyan made a soft landing near the lunar south pole on 23 August 2023, making India the fourth country to achieve a soft landing on the Moon and the first to land near the south pole.",
+    "is_gold": true,
+    "domain": "space"
+  },
+  {
+    "id": "doc_space_01_te",
+    "title": "చంద్రయాన్-3 చంద్ర అన్వేషణ",
+    "language": "te",
+    "text": "చంద్రయాన్-3 భారత అంతరిక్ష పరిశోధన సంస్థ (ఇస్రో) చేపట్టిన మూడవ చంద్ర అన్వేషణ మిషన్. ఇది 2023 జూలై 14న ప్రయోగించబడింది. విక్రమ్ ల్యాండర్ మరియు ప్రజ్ఞాన్ రోవర్ 2023 ఆగస్టు 23న చంద్రుని దక్షిణ ధ్రువ ప్రాంతంలో సురక్షితంగా దిగాయి.",
+    "is_gold": true,
+    "domain": "space"
+  },
+  {
+    "id": "doc_space_01_hi",
+    "title": "चंद्रयान-3 मिशन विवरण",
+    "language": "hi",
+    "text": "चंद्रयान-3 भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) का तीसरा चंद्र मिशन था। इसे 14 जुलाई 2023 को प्रक्षेपित किया गया था। लैंडर विक्रम और रोवर प्रज्ञान 23 अगस्त 2023 को चंद्रमा के दक्षिणी ध्रुव पर सफलतापूर्वक उतरे।",
+    "is_gold": true,
+    "domain": "space"
+  },
+  {
+    "id": "doc_temple_01",
+    "title": "Brihadisvara Temple History",
+    "language": "en",
+    "text": "Brihadisvara Temple, located in Thanjavur, Tamil Nadu, was consecrated by Raja Raja Chola I in 1010 CE. Built entirely of granite, the temple tower stands over 60 meters high and remains one of the largest Hindu temples in India.",
+    "is_gold": true,
+    "domain": "history"
+  },
+  {
+    "id": "doc_temple_01_ta",
+    "title": "தஞ்சை பெரிய கோவில் வரலாறு",
+    "language": "ta",
+    "text": "தஞ்சாவூர் பிரகதீஸ்வரர் கோவில் முதலாம் இராஜராஜ சோழனால் கி.பி 1010 இல் குடமுழுக்கு செய்யப்பட்டது. முற்றிலும் கிரானைட் கற்களால் கட்டப்பட்ட இந்த கோவிலின் கோபுரம் 60 மீட்டருக்கும் மேல் உயரமானது.",
+    "is_gold": true,
+    "domain": "history"
+  },
+  {
+    "id": "doc_space_distractor",
+    "title": "Mangalyaan Mars Mission",
+    "language": "en",
+    "text": "The Mars Orbiter Mission, also known as Mangalyaan, was launched by ISRO on 5 November 2013 and successfully entered Mars orbit on 24 September 2014.",
+    "is_gold": false,
+    "domain": "space"
+  }
+]
