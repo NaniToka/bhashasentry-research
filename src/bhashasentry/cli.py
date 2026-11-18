@@ -6,6 +6,7 @@ from bhashasentry.config import SupportedLanguage
 from bhashasentry.nlp.lang_id import IndicLanguageIdentifier
 from benchmarks.retrieval_eval import evaluate_retrieval
 from benchmarks.generation_eval import run_generation_benchmark
+from benchmarks.claim_eval import evaluate_claims
 
 def main():
     parser = argparse.ArgumentParser(
@@ -20,6 +21,7 @@ def main():
     
     ret_parser = subparsers.add_parser("eval-retrieval", help="Run retrieval benchmark evaluation")
     gen_parser = subparsers.add_parser("eval-generation", help="Run generation benchmark evaluation")
+    claim_parser = subparsers.add_parser("eval-claims", help="Run claim verification benchmark evaluation")
     
     args = parser.parse_args()
     
@@ -33,6 +35,9 @@ def main():
     elif args.subcommand == "eval-generation":
         res = run_generation_benchmark()
         print(f"Generated {len(res)} benchmark outputs.")
+    elif args.subcommand == "eval-claims":
+        res = evaluate_claims()
+        print(json.dumps(res, indent=2))
     else:
         parser.print_help()
 
