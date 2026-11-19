@@ -14,15 +14,24 @@ class CrossLingualParityEvaluator:
         
     def evaluate_pair(self, query_id: str, ans_a: str, lang_a: SupportedLanguage,
                       ans_b: str, lang_b: SupportedLanguage) -> CrossLingualConsistencyResult:
-        # Extract numerical tokens (dates, quantities)
-        nums_a = set(re.findall(r"\b\d+\b", ans_a))
-        nums_b = set(re.findall(r"\b\d+\b", ans_b))
+        # Extract numerical tokens (dates, quantities) - handle agglutinative Indic case suffixes
+        years_a = set(re.findall(r"\d{4}", ans_a))
+        years_b = set(re.findall(r"\d{4}", ans_b))
+        nums_a = set(re.findall(r"\d+", ans_a))
+        nums_b = set(re.findall(r"\d+", ans_b))
         
         # Check numerical contradiction
         num_mismatch = False
-        if nums_a and nums_b:
-            if not nums_a.intersection(nums_b):
+        if years_a and years_b and years_a != years_b:
+            num_mismatch = True
+        elif nums_a and nums_b:
+            # Multi-digit numbers mismatch check (excluding single digit mission numbers like '3')
+            sig_a = {n for n in nums_a if len(n) >= 2}
+            sig_b = {n for n in nums_b if len(n) >= 2}
+            if sig_a and sig_b and sig_a != sig_b:
                 num_mismatch = True
+
+
                 
         # Heuristic cross-lingual mutual entailment
         if num_mismatch:
