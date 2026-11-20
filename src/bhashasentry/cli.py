@@ -8,6 +8,7 @@ from benchmarks.retrieval_eval import evaluate_retrieval
 from benchmarks.generation_eval import run_generation_benchmark
 from benchmarks.claim_eval import evaluate_claims
 from benchmarks.consistency_eval import evaluate_cross_lingual_consistency
+from benchmarks.hallucination_eval import evaluate_hallucination_detection
 
 def main():
     parser = argparse.ArgumentParser(
@@ -24,6 +25,7 @@ def main():
     gen_parser = subparsers.add_parser("eval-generation", help="Run generation benchmark evaluation")
     claim_parser = subparsers.add_parser("eval-claims", help="Run claim verification benchmark evaluation")
     cons_parser = subparsers.add_parser("eval-consistency", help="Run cross-lingual consistency benchmark")
+    hall_parser = subparsers.add_parser("eval-hallucination", help="Run hallucination detection benchmark")
     
     args = parser.parse_args()
     
@@ -42,6 +44,9 @@ def main():
         print(json.dumps(res, indent=2))
     elif args.subcommand == "eval-consistency":
         res = evaluate_cross_lingual_consistency()
+        print(json.dumps(res, indent=2))
+    elif args.subcommand == "eval-hallucination":
+        res = evaluate_hallucination_detection()
         print(json.dumps(res, indent=2))
     else:
         parser.print_help()
