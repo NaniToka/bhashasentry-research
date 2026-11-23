@@ -1,0 +1,7 @@
+Pipeline Stage,Failure Problem,Relative Error Contribution (%),Description
+Stage 1: Query Understanding,Problem A,11.2%,Morphological tokenization drift and regional dialect misinterpretation
+Stage 2: Evidence Retrieval,Problem B,28.4%,Failure to retrieve gold passage in top-3 candidates
+Stage 3: Evidence Utilization,Problem C,19.6%,Distractor bleed and failure to isolate target sentence in retrieved context
+Stage 4: Answer Generation,Problem D,26.8%,Invention of unsupported dates or named entities during translation synthesis
+Stage 5: Cross-Lingual Parity,Problem E,9.5%,Divergence in factual meaning across language variants
+Stage 6: Reliability Calibration,Problem F,4.5%,Overconfident estimation on borderline ungrounded claims
