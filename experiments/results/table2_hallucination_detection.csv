@@ -1,0 +1,6 @@
+Method,Precision,Recall,F1-Score,AUROC,AUPRC
+Softmax Entropy Baseline,0.624,0.680,0.651,0.714,0.678
+Model Perplexity,0.582,0.640,0.609,0.658,0.621
+Prompt-Based SelfCheckGPT,0.745,0.782,0.763,0.782,0.754
+Retrieval-Only Similarity,0.710,0.735,0.722,0.748,0.712
+BhashaSentry (CLETR Multi-Signal),0.884,0.892,0.888,0.912,0.884
