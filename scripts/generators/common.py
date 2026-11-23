@@ -36,7 +36,7 @@ def commit_step(day_num: int, commit_num: int, message: str, files_to_add=None):
     else:
         subprocess.run(["git", "add", "."], cwd=REPO_ROOT, check=True)
 
-    res = subprocess.run(["git", "commit", "-m", message], cwd=REPO_ROOT, env=env, capture_output=True, text=True)
+    res = subprocess.run(["git", "commit", "--allow-empty", "-m", message], cwd=REPO_ROOT, env=env, capture_output=True, text=True)
     if res.returncode != 0:
         print(f"Commit error: {res.stderr}\nstdout: {res.stdout}")
         raise RuntimeError(res.stderr)

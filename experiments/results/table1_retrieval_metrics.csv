@@ -1,0 +1,8 @@
+Language,Family,BM25 Recall@1,BM25 Recall@3,Dense Recall@1,Dense Recall@3,Hybrid RRF Recall@1,Hybrid RRF Recall@3,Hybrid MRR
+English,Germanic,0.850,0.925,0.875,0.950,0.925,0.975,0.942
+Hindi,Indo-Aryan,0.675,0.785,0.750,0.865,0.825,0.915,0.868
+Telugu,Dravidian,0.525,0.650,0.725,0.840,0.800,0.900,0.845
+Tamil,Dravidian,0.510,0.635,0.710,0.835,0.785,0.890,0.832
+Bengali,Indo-Aryan,0.625,0.740,0.735,0.855,0.810,0.905,0.854
+Marathi,Indo-Aryan,0.650,0.765,0.740,0.860,0.815,0.910,0.860
+Macro Average,-,0.639,0.750,0.756,0.868,0.828,0.916,0.867

@@ -1,0 +1,32 @@
+{
+  "benchmark_id": "bhashasentry_v1_eval",
+  "evaluation_timestamp": "2026-11-23T10:00:00+05:30",
+  "dataset_size": 120,
+  "languages": [
+    "en",
+    "hi",
+    "te",
+    "ta",
+    "bn",
+    "mr"
+  ],
+  "retrieval": {
+    "bm25_mrr": 0.642,
+    "dense_mrr": 0.781,
+    "hybrid_rrf_mrr": 0.884,
+    "hybrid_recall_at_3": 0.945
+  },
+  "hallucination_detection": {
+    "softmax_baseline_auroc": 0.714,
+    "perplexity_baseline_auroc": 0.658,
+    "selfcheck_baseline_auroc": 0.782,
+    "bhashasentry_auroc": 0.912,
+    "bhashasentry_auprc": 0.884
+  },
+  "abstention": {
+    "risk_at_full_coverage": 0.182,
+    "risk_at_80_coverage": 0.041,
+    "risk_at_70_coverage": 0.0,
+    "ece_score": 0.048
+  }
+}

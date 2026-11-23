@@ -1,0 +1,5 @@
+{
+  "macro_mrr_bm25": 0.695,
+  "macro_mrr_dense": 0.812,
+  "macro_mrr_hybrid": 0.867
+}
