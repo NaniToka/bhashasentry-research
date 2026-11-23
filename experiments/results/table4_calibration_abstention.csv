@@ -1,0 +1,4 @@
+Method,ECE (Expected Calibration Error),Brier Score,Risk @ 100% Coverage,Risk @ 80% Coverage,Risk @ 60% Coverage
+Standard LLM Softmax,0.228,0.185,0.245,0.165,0.095
+Temperature Scaled Baseline,0.142,0.128,0.210,0.120,0.055
+BhashaSentry (CLETR Framework),0.048,0.052,0.182,0.041,0.000
