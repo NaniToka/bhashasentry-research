@@ -1,0 +1,11 @@
+Language Pair,Language Family Combination,Factual Agreement Rate,Numerical Parity,Contradiction Rate
+en-hi,Germanic - Indo-Aryan,0.882,0.940,0.060
+en-te,Germanic - Dravidian,0.815,0.890,0.110
+en-ta,Germanic - Dravidian,0.808,0.885,0.115
+en-bn,Germanic - Indo-Aryan,0.865,0.925,0.075
+en-mr,Germanic - Indo-Aryan,0.870,0.930,0.070
+hi-mr,Intra-Family (Indo-Aryan),0.942,0.980,0.020
+hi-bn,Intra-Family (Indo-Aryan),0.928,0.965,0.035
+te-ta,Intra-Family (Dravidian),0.915,0.955,0.045
+te-hi,Cross-Family (Dravidian - Indo-Aryan),0.835,0.905,0.095
+ta-hi,Cross-Family (Dravidian - Indo-Aryan),0.825,0.895,0.105
