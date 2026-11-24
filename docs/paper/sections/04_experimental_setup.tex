@@ -1,0 +1,12 @@
+\section{Experimental Setup}
+\subsection{Languages and Dataset}
+Experiments were conducted on six target languages: English (\texttt{en}), Hindi (\texttt{hi}), Telugu (\texttt{te}), Tamil (\texttt{ta}), Bengali (\texttt{bn}), and Marathi (\texttt{mr}). The dataset comprises 120 curated items spanning Indian space exploration, historical architecture, and civic institutions.
+
+\subsection{Baselines}
+We compare against:
+\begin{enumerate}
+    \item \textbf{Softmax Entropy}: Prediction entropy from model output distribution.
+    \item \textbf{Model Perplexity}: Normalized sequence log-perplexity.
+    \item \textbf{SelfCheckGPT}: Consistency across sampled stochastic responses.
+    \item \textbf{Retrieval-Only Similarity}: Cosine similarity between query and retrieved passages.
+\end{enumerate}
