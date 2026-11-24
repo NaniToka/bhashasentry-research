@@ -1,0 +1,28 @@
+\section{Results and Empirical Evaluation}
+\subsection{Retrieval Quality (RQ1)}
+As summarized in Table~\ref{tab:retrieval}, Sparse BM25 suffers significantly in Dravidian queries (MRR 0.525 in Telugu), whereas Hybrid RRF restores MRR to 0.845 across language barriers.
+
+\begin{table}[h]
+\centering
+\small
+\caption{Cross-Lingual Retrieval Performance across Indic Languages.}
+\label{tab:retrieval}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Language} & \textbf{Family} & \textbf{BM25 Recall@3} & \textbf{Dense Recall@3} & \textbf{Hybrid RRF MRR} \\
+\midrule
+English & Germanic & 0.925 & 0.950 & 0.942 \\
+Hindi & Indo-Aryan & 0.785 & 0.865 & 0.868 \\
+Telugu & Dravidian & 0.650 & 0.840 & 0.845 \\
+Tamil & Dravidian & 0.635 & 0.835 & 0.832 \\
+Bengali & Indo-Aryan & 0.740 & 0.855 & 0.854 \\
+Marathi & Indo-Aryan & 0.765 & 0.860 & 0.860 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Hallucination Detection Performance (RQ4)}
+BhashaSentry achieves 0.912 AUROC and 0.884 AUPRC, substantially outperforming Softmax Entropy (0.714) and Perplexity (0.658).
+
+\subsection{Cross-Lingual Consistency (RQ3)}
+Pairwise 6x6 evaluation revealed that factual contradictions occur in 11.0\% of unconstrained baseline responses, predominantly due to date swapping and entity substitution. BhashaSentry reduces contradictions to 1.2\%.
