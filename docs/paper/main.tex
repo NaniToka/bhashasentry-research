@@ -1,0 +1,34 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{\textbf{BhashaSentry: Multilingual Evidence Reliability and Cross-Lingual Hallucination Detection in Retrieval-Augmented Generative AI}}
+\author{\textbf{Nani Toka} \\
+Department of Artificial Intelligence \\
+\texttt{tokananiy@gmail.com}}
+\date{November 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Multilingual Retrieval-Augmented Generation (RAG) systems are increasingly deployed to serve linguistically diverse populations across the Indian subcontinent. However, while modern Large Language Models exhibit high surface fluency in Indic languages, fluency does not guarantee factual correctness. In cross-lingual information retrieval scenarios---such as a Telugu or Tamil query querying English knowledge bases---systems frequently suffer from query understanding drift, lexical retrieval failure, distractor utilization errors, ungrounded claim generation, and cross-lingual factual contradictions. In this paper, we propose \textbf{BhashaSentry}, an evidence-aware reliability framework that audits the full multilingual RAG pipeline rather than evaluating isolated generated text. At the core of BhashaSentry is the \textbf{Cross-Lingual Evidence Traceability and Reliability (CLETR)} framework, which jointly evaluates retrieval relevance, atomic proposition entailment, and cross-lingual factual consistency. Across six benchmark languages (English, Hindi, Telugu, Tamil, Bengali, Marathi), BhashaSentry achieves a hallucination detection AUROC of 0.912 (vs. 0.714 for softmax confidence) and an Expected Calibration Error (ECE) of 0.048. Furthermore, we formulate an evidence-aware selective prediction policy that safely abstains on unreliable queries, achieving 0.0\% risk at 70\% coverage.
+\end{abstract}
+
+\input{sections/01_introduction.tex}
+\input{sections/02_related_work.tex}
+\input{sections/03_methodology.tex}
+\input{sections/04_experimental_setup.tex}
+\input{sections/05_results.tex}
+\input{sections/06_discussion.tex}
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

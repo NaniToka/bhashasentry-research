@@ -1,0 +1,8 @@
+\section{Introduction}
+Large Language Models (LLMs) paired with Retrieval-Augmented Generation (RAG) have become the default paradigm for knowledge-grounded question answering. In the Indian linguistic ecosystem---comprising over 1.4 billion speakers across Indo-Aryan and Dravidian language families---multilingual RAG models face profound systemic challenges.
+
+When an information request is submitted in an Indic language (e.g. Telugu), the system typically queries an English or mixed-script knowledge store, retrieves passages, and synthesizes an Indic answer. Even if the underlying English source document contains accurate facts, the generated Indic response often introduces fabricated entities, distorted numerical quantities, or contradictory temporal assertions.
+
+Prior works in hallucination detection predominantly evaluate monolingual English corpora or inspect output token logit perplexity. Such baselines fail in multilingual settings due to vocabulary bias, cross-lingual tokenizer asymmetry, and poorly calibrated confidence scores.
+
+To address these vulnerabilities, we propose \textbf{BhashaSentry}, pursuing six core objectives (O1--O6) and answering six fundamental research questions (RQ1--RQ6).
