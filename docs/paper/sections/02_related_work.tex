@@ -1,0 +1,9 @@
+\section{Related Work}
+\subsection{Multilingual Retrieval-Augmented Generation}
+Recent benchmarks such as IndicRAGSuite and IndicGenBench demonstrate that retrieval accuracy degrades sharply in Dravidian languages compared to Indo-Aryan or Latin scripts due to subword fertility disparities and agglutinative morphologies.
+
+\subsection{Hallucination Detection and NLI Grounding}
+Approaches like SelfCheckGPT and FactScore decompose generation into verifiable statements. However, their reliance on multiple stochastic sampling passes imposes prohibitive computational overhead and exhibits poor zero-shot performance on Indic vernaculars.
+
+\subsection{Selective Prediction and Abstention}
+Selective classification allows models to abstain when confidence falls below calibrated thresholds. BhashaSentry extends selective prediction to multilingual RAG via multi-signal evidence traceability.

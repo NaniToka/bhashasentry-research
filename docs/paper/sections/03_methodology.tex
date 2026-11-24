@@ -1,0 +1,24 @@
+\section{The CLETR Framework Methodology}
+We formulate the \textbf{Cross-Lingual Evidence Traceability and Reliability (CLETR)} framework. Let $q$ be the query, $\mathcal{E} = \{p_1, \dots, p_k\}$ be the retrieved passages, and $a$ be the generated answer decomposed into atomic claims $\{c_1, \dots, c_m\}$.
+
+The joint reliability function $\mathcal{R}(q, a, \mathcal{E})$ is formulated as:
+\begin{equation}
+\mathcal{R}(q, a, \mathcal{E}) = w_{\text{ret}} S_{\text{ret}}(q, \mathcal{E}) + w_{\text{sup}} S_{\text{sup}}(a, \mathcal{E}) - w_{\text{contra}} S_{\text{contra}}(a, \mathcal{E}) + w_{\text{cons}} S_{\text{cons}}(a_{\text{cross}})
+\end{equation}
+
+Where:
+\begin{itemize}
+    \item $S_{\text{ret}}(q, \mathcal{E})$: Reciprocal Rank Fusion (RRF) retrieval score combining sparse BM25 and dense semantic bi-encoder projections.
+    \item $S_{\text{sup}}(a, \mathcal{E})$: Fraction of atomic propositions entailed by $\mathcal{E}$.
+    \item $S_{\text{contra}}(a, \mathcal{E})$: Fraction of propositions contradicted by $\mathcal{E}$.
+    \item $S_{\text{cons}}(a_{\text{cross}})$: Bidirectional mutual entailment agreement across parallel translations.
+\end{itemize}
+
+A three-tier decision rule is applied:
+\begin{equation}
+\text{Decision} = \begin{cases} 
+\text{ANSWER} & \text{if } \mathcal{R} \ge \tau_{\text{answer}} \\
+\text{WARN} & \text{if } \tau_{\text{warn}} \le \mathcal{R} < \tau_{\text{answer}} \\
+\text{ABSTAIN} & \text{if } \mathcal{R} < \tau_{\text{warn}}
+\end{cases}
+\end{equation}
